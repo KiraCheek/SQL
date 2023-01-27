@@ -1,0 +1,22 @@
+--Design A Store Database
+
+CREATE TABLE pants(id INTEGER PRIMARY KEY, color TEXT, size TEXT, aisle INTEGER, price INTEGER);
+
+INSERT INTO pants VALUES(1,"red", "small", 4, 19); 
+INSERT INTO pants VALUES(2,"blue", "medium", 3, 12);
+INSERT INTO pants VALUES(3,"purple", "large", 3, 10);
+INSERT INTO pants VALUES(4,"red", "medium", 3, 12);
+INSERT INTO pants VALUES(5,"blue", "medium", 3, 12);
+INSERT INTO pants VALUES(6,"purple", "small", 3, 12);
+INSERT INTO pants VALUES(7,"red", "xlarge", 3, 19);
+INSERT INTO pants VALUES(8,"blue", "small", 3, 15);
+INSERT INTO pants VALUES(9,"black", "medium", 3, 10);
+INSERT INTO pants VALUES(10,"blue", "medium", 3, 12);
+INSERT INTO pants VALUES(11,"red", "medium", 3, 12);
+INSERT INTO pants VALUES(12,"blue", "medium", 3, 12);
+INSERT INTO pants VALUES(13,"blue", "medium", 3, 12);
+INSERT INTO pants VALUES(14,"blue", "medium", 3, 12);
+INSERT INTO pants VALUES(15,"black", "medium", 1, 12);
+
+SELECT * FROM pants order by aisle;
+SELECT SUM(price) FROM pants;
