@@ -1,22 +1,30 @@
 --Design A Store Database
 
-CREATE TABLE pants(id INTEGER PRIMARY KEY, color TEXT, size TEXT, aisle INTEGER, price INTEGER);
+CREATE TABLE Outdoor_Adventure_Gear_Store (
+    Item_ID INTEGER PRIMARY KEY,
+    Product_Name TEXT,
+    Category TEXT,
+    Price REAL,
+    Stock_Quantity INTEGER
+);
 
-INSERT INTO pants VALUES(1,"red", "small", 4, 19); 
-INSERT INTO pants VALUES(2,"blue", "medium", 3, 12);
-INSERT INTO pants VALUES(3,"purple", "large", 3, 10);
-INSERT INTO pants VALUES(4,"red", "medium", 3, 12);
-INSERT INTO pants VALUES(5,"blue", "medium", 3, 12);
-INSERT INTO pants VALUES(6,"purple", "small", 3, 12);
-INSERT INTO pants VALUES(7,"red", "xlarge", 3, 19);
-INSERT INTO pants VALUES(8,"blue", "small", 3, 15);
-INSERT INTO pants VALUES(9,"black", "medium", 3, 10);
-INSERT INTO pants VALUES(10,"blue", "medium", 3, 12);
-INSERT INTO pants VALUES(11,"red", "medium", 3, 12);
-INSERT INTO pants VALUES(12,"blue", "medium", 3, 12);
-INSERT INTO pants VALUES(13,"blue", "medium", 3, 12);
-INSERT INTO pants VALUES(14,"blue", "medium", 3, 12);
-INSERT INTO pants VALUES(15,"black", "medium", 1, 12);
+INSERT INTO Outdoor_Adventure_Gear_Store (Item_ID, Product_Name, Category, Price, Stock_Quantity)
+VALUES
+    (1, 'Camping Tent', 'Camping', 150.00, 25),
+    (2, 'Hiking Backpack', 'Hiking', 80.00, 50),
+    (3, 'Sleeping Bag', 'Camping', 50.00, 40),
+    (4, 'Trail Running Shoes', 'Running', 100.00, 30),
+    (5, 'Camping Stove', 'Camping', 75.00, 20),
+    (6, 'Climbing Harness', 'Climbing', 60.00, 15),
+    (7, 'Fishing Rod', 'Fishing', 45.00, 35),
+    (8, 'Mountain Bike', 'Biking', 400.00, 10),
+    (9, 'Binoculars', 'Observation', 30.00, 25),
+    (10, 'Waterproof Jacket', 'Outerwear', 120.00, 45),
+    (11, 'Kayak', 'Water Sports', 300.00, 5),
+    (12, 'Camping Chair', 'Camping', 25.00, 30),
+    (13, 'Trail Map', 'Navigation', 10.00, 50),
+    (14, 'Climbing Shoes', 'Climbing', 90.00, 20),
+    (15, 'Fishing Tackle Kit', 'Fishing', 40.00, 15);
 
-SELECT * FROM pants order by aisle;
-SELECT SUM(price) FROM pants;
+SELECT * FROM Outdoor_Adventure_Gear_Store order by Stock_Quantity;
+SELECT SUM(price) FROM Outdoor_Adventure_Gear_Store;
