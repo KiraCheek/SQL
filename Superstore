@@ -34,7 +34,7 @@ FROM superstore
 ORDER BY price desc;
 
 #Show a statistic about the item prices.
-SELECT sum(price),item_name
+SELECT avg(price),item_name
 FROM superstore
 GROUP BY (item_name);
 
